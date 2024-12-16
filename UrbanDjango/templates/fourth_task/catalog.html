@@ -1,0 +1,15 @@
+{% extends 'menu.html'%}
+
+{% block pagename %}
+    <h1> Каталог препаратов аптеки {{block.super}}</h1>
+{% endblock %}
+
+{% block menu %}
+    {{block.super}}
+{% endblock %}
+
+{% block catalog %}
+    <h2>Препараты для поддержания жизни</h2>
+    {{block.super}}
+    <button><a href="/"> Вернуться к страданиям</a></button>
+{% endblock %}

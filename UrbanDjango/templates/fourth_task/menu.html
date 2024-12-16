@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Аптека программиста</title>
+</head>
+<body>
+    <pagename>
+        {% block pagename %}
+        <b>URBAN</b>
+        {% endblock %}
+    </pagename>
+
+    <menu>
+        {% block menu %}
+        <p><a href="/">Главная</a> </p>
+        <p><a href="/catalog">Каталог</a></p>
+        <p><a href="/help">Помощь</a></p>
+        {% endblock %}
+    </menu>
+
+    <catalog>
+        {% block catalog %}
+        <ul>
+        {% for m in medicine %}
+            <li> {{m.0}} <button>{{m.1}}</button></li>
+        {% endfor %}
+        </ul>
+        {% endblock %}
+    </catalog>
+
+</body>
+</html>
